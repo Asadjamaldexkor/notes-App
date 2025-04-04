@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: monospace;
+  font-family: 20px;
+}
+ .header{
+  @apply flex  mb-[15px] bg-blue-300 shadow-lg sticky top-0
+}
+ .header p{
+  @apply flex items-center text-xl font-semibold p-[10px] pl-[33px] cursor-pointer
+ }
+.container{
+  @apply w-full grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4
+}
+.note{
+   @apply mb-[10px] rounded-lg shadow-lg whitespace-pre-wrap p-[16px] h-[250px] flex flex-col justify-between flex-grow-0 w-full max-w-md
+}
+.note-footer{
+  @apply flex  justify-between items-center
+}
+.button-hover{
+  @apply hover:scale-125 hover:cursor-pointer
+}
+.search{
+  @apply flex bg-blue-200 rounded-xl p-[5px] mb-[56px] sticky top-16
+}
+.search input{
+  @apply bg-blue-200 outline-none w-full
+}
+.input-area{
+  @apply outline-none border-none resize-none bg-green-300 placeholder-gray-500
+}
+.note-text{
+  @apply break-words overflow-x-auto
+}
+.text{
+  @apply font-bold text-xl outline-none border-none resize-none bg-green-300 placeholder-gray-500
+}
+/* Scrollbar ko dark mode me theek karne ke liye */
+body.dark {
+  background-color: #111827; /* Dark gray */
+  color: white;
+}
+
+body.dark ::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.dark ::-webkit-scrollbar-track {
+  background: #1f2937; /* Dark mode track */
+}
+
+body.dark ::-webkit-scrollbar-thumb {
+  background: #374151; /* Dark mode scrollbar */
+  border-radius: 10px;
+}
+
